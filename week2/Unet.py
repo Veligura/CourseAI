@@ -44,4 +44,4 @@ def Unet(nClasses, optimizer=None, input_width=360, input_height=480, nChannels=
 if __name__ == '__main__':
     m = Unet(81, optimizer='adam')
     from keras.utils import plot_model
-    plot_model(m, show_shapes=True, to_file='modelGraphs/Unet.png')
+    plot_model(m, show_shapes=True, to_file='Unet.png')
