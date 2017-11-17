@@ -3,9 +3,9 @@ from keras.layers import Input, merge, core, Dropout
 from keras.layers.convolutional import Convolution2D, MaxPooling2D, UpSampling2D
 
 
-def Unet(nClasses, optimizer=None, input_width=360, input_height=480, nChannels=3):
+def Unet(nClasses, optimizer=None, input_width=360, input_height=480):
 
-    inputs = Input((input_height, input_width, nChannels))
+    inputs = Input((input_height, input_width, 3))
     conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(inputs)
     conv1 = Dropout(0.2)(conv1)
     conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv1)
